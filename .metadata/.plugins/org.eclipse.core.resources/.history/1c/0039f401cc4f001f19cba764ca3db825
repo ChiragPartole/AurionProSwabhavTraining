@@ -1,0 +1,18 @@
+package com.techlabs.structural.adapter.model;
+
+public class HatAdapter implements IItems{
+
+	Hat hat = HatAdapte()
+	@Override
+	public void getItemName() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getItemPrice() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

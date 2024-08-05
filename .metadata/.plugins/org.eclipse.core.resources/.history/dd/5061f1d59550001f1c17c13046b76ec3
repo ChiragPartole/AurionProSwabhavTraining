@@ -1,0 +1,39 @@
+package com.techlabs.behavioural.test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.techlabs.behavioural.model.Account;
+import com.techlabs.behavioural.model.EmailNotifier;
+import com.techlabs.behavioural.model.INotifiers;
+import com.techlabs.behavioural.model.SMSNotifier;
+
+public class AccountTest {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		List<INotifiers> notifiers = new ArrayList<INotifiers>();
+		
+		notifiers.add(new SMSNotifier());
+		notifiers.add(new EmailNotifier());
+		Account account = new Account(1,"Chirag",1000,notifiers);
+
+		account.registerNotifier(notifiers);
+		
+		
+		account.deposit(100);
+		account.withdraw(100);
+		try
+		{
+			account.withdraw(2000);
+		}
+		catch(Exception exception)
+		{
+			System.out.println(exception.getMessage());
+		}
+		
+	}
+
+}

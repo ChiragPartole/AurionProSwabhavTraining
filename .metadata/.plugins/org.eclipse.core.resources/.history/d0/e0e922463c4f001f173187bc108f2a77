@@ -1,0 +1,10 @@
+package com.techlabs.creational.abstractfactory.model;
+
+public class CurrentAccountFactory implements IAccountFactory{
+
+	@Override
+	public IAccount createAccount() {
+		return  new CurrentAccount(1, "chirag", 1000, 1000);
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.techlabs.creational.prototype.model;
+
+public class Car implements Vehicle{
+
+	private int topSpeed;
+	
+	private Car(Car car) {
+        
+        this.topSpeed = car.topSpeed;
+    }
+
+    @Override
+    public Car clone() {
+        return new Car(this);
+    }
+}

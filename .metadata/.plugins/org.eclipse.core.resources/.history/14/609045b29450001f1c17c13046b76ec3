@@ -1,0 +1,9 @@
+package com.techlabs.behavioural.model;
+
+
+public interface INotifiers {
+	
+	void notifyUser(Account account,double amount);
+
+
+}

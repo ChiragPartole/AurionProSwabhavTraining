@@ -1,0 +1,18 @@
+package com.techlabs.structural.facade.model;
+
+public class HomeTheaterFacade {
+	
+	private DVDPlayer dvdPlayer = new DVDPlayer();
+	private Projector projector = new Projector();
+	private SoundSystem soundSystem = new SoundSystem();
+	
+	public void watchMovie(String movie)
+	{
+		projector.on();
+		soundSystem.on();
+		soundSystem.setVolume(6);
+		dvdPlayer.on();
+		dvdPlayer.play(movie);
+	}
+
+}

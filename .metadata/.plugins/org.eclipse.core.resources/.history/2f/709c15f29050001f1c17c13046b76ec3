@@ -1,0 +1,11 @@
+package com.techlabs.behavioural.model;
+
+public class SMSNotifier implements INotifiers{
+
+	@Override
+	public void notifyUser(Account account) {
+		System.out.println("SMS");
+		
+	}
+
+}

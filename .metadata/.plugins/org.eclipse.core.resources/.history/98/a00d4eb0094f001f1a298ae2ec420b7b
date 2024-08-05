@@ -1,0 +1,10 @@
+package com.techlabs.creational.abstractfactory.model;
+
+public class TataFactory implements IFactory{
+
+	@Override
+	public ICar makeCar() {
+		return (ICar) new Tata();
+	}
+
+}

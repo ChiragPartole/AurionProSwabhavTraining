@@ -1,0 +1,6 @@
+package com.techlabs.isp.solution.model;
+
+public interface IRobot {
+	void startWork();
+	void stopWork();
+}

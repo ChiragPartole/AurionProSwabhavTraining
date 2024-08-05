@@ -1,0 +1,23 @@
+package com.techlabs.behavioural.state.model;
+
+public class Delivered implements IPacketState{
+
+	@Override
+	public void next(Packet packet) {
+		packet.setPacketState(new Received());
+		
+	}
+
+	@Override
+	public void current(Packet packet) {
+		System.out.println("Packet is in Ordered state");
+		
+	}
+
+	@Override
+	public void previous(Packet packet) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

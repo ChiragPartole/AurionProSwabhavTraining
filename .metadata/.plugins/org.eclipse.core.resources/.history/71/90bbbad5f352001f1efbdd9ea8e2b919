@@ -1,0 +1,10 @@
+package com.techlabs.main;
+
+public class Student {
+
+	private IStudentService studentService;
+	
+	public double calculatePercentage() {
+		return (studentService.getMarks()/studentService.getNumberOfSubjects())*100;
+	}
+}

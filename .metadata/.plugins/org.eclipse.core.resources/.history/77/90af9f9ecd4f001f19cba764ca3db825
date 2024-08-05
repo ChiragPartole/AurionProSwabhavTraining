@@ -1,0 +1,5 @@
+package com.techlabs.structural.adapter.model;
+
+public class ShoppingCart {
+
+}

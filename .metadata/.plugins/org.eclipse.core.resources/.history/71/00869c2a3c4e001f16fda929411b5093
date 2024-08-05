@@ -1,0 +1,9 @@
+package com.techlabs.isp.solution.model;
+
+public interface IWorker {
+	void startWork();
+	void stopWork();
+	void eat();
+	void drink();
+	
+}

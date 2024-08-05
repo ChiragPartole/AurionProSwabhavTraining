@@ -1,0 +1,7 @@
+package com.techlabs.isp.solution.model;
+
+public interface IWorkerable {
+
+	void startWork();
+	void stopWork();
+}

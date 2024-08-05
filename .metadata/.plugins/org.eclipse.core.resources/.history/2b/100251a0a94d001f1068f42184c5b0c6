@@ -1,0 +1,14 @@
+package com.techlabs.test;
+
+import java.io.FileInputStream;
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		FileInputStream fileInputStream = new FileInputStream("D:\\Aurionpro_training\\20_streams_app\\src\\com\\techlabs\\model\\students");
+
+	}
+
+}

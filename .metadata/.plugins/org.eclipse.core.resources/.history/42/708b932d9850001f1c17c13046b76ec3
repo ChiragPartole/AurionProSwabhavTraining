@@ -1,0 +1,10 @@
+package com.techlabs.behavioural.model;
+
+public class InsufficientFundsException extends RuntimeException{
+	
+	public String getMessage()
+	{
+		return "Insufficient Funds";
+	}
+
+}

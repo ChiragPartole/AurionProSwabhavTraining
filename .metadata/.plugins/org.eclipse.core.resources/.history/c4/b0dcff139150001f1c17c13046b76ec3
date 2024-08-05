@@ -1,0 +1,9 @@
+package com.techlabs.behavioural.model;
+
+import java.util.List;
+
+public interface INotifiers {
+	
+	void notifyUser(Account account, List<String> messages);
+
+}

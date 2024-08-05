@@ -1,0 +1,10 @@
+package com.techlabs.creational.abstractfactory.model;
+
+public class SavingAccountFactory implements IAccountFactory{
+
+	@Override
+	public IAccount createAccount() {
+		return new SavingsAccount(2, "rohit", 2000, 1000);
+	}
+
+}

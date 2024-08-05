@@ -1,0 +1,26 @@
+package com.techlabs.creational.factory.test;
+
+import com.techlabs.creational.factory.model.CarFactory;
+import com.techlabs.creational.factory.model.ICar;
+
+public class CarTest {
+
+	public static void main(String[] args) {
+		ICar maruti = CarFactory.makeCar("Maruti");
+		maruti.start();
+		maruti.stop();
+		
+		ICar tata =CarFactory.makeCar("Tata");
+		tata.start();
+		tata.stop();
+		
+		ICar mahindra =CarFactory.makeCar("Mahindra");
+		mahindra.start();
+		mahindra.stop();
+		
+		
+		
+
+	}
+
+}

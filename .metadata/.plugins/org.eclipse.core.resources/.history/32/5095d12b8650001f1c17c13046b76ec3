@@ -1,0 +1,18 @@
+package com.techlabs.structural.proxy.test;
+
+import com.techlabs.structural.proxy.model.IStudent;
+import com.techlabs.structural.proxy.model.ProxyStudent;
+
+
+public class StudentTest {
+
+	 public static void main(String[] args) {
+	        IStudent student = new ProxyStudent("Alice", 123);
+	        
+	        // The first call to getDetails will load the details from the database
+	        student.getDetails();
+	        
+	        // Subsequent calls will use the cached RealStudent object
+	        student.getDetails();
+	    }
+	}

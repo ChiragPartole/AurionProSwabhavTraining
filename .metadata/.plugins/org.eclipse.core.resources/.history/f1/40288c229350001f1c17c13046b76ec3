@@ -1,0 +1,13 @@
+package com.techlabs.behavioural.model;
+
+import java.util.List;
+
+public class WhatsappNotifier implements INotifiers{
+	
+	@Override
+	public void notifyUser(Account account) {
+		System.out.println("WhatsappNotifier");
+	}
+
+
+}

@@ -1,0 +1,13 @@
+package com.techlabs.abstractfactory.model;
+
+import com.techlabs.creational.abstractfactory.model.ICar;
+import com.techlabs.creational.abstractfactory.model.IFactory;
+import com.techlabs.creational.abstractfactory.model.Maruti;
+
+public class MarutiFactory implements IFactory{
+
+	@Override
+	public ICar makeCar() {
+		return (ICar) new Maruti();
+	}
+}

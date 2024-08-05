@@ -1,0 +1,17 @@
+package com.techlabs.creational.factory.model;
+
+public class AccountFactory {
+
+	public static IAccount makeAccount(AccountTypes accountType)
+	{
+		IAccount account = null;
+		if(accountType == AccountTypes.CurrentAccount)
+			account = new CurrentAccount();
+		if(accountType == AccountTypes.SavingsAccount)
+			account = new SavingsAccount();
+		
+		
+		return account;
+	}
+
+}

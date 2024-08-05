@@ -1,0 +1,5 @@
+package com.techlabs.behavioural.strategy.model;
+
+public class OperationStrategy {
+
+}

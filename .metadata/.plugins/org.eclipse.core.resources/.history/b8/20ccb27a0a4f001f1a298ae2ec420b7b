@@ -1,0 +1,5 @@
+package com.techlabs.creational.abstractfactory.model;
+
+public class CurrentAccount {
+
+}

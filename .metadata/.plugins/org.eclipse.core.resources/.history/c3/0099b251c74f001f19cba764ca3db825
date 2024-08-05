@@ -1,0 +1,9 @@
+package com.techlabs.structural.facade.model;
+
+public class SoundSystem {
+	public void on()
+	{
+		System.out.println("sound system is on");
+	}
+
+}

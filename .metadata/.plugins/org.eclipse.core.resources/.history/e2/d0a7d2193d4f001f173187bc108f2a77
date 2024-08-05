@@ -1,0 +1,48 @@
+package com.techlabs.creational.abstractfactory.test;
+
+import java.util.Scanner;
+
+import com.techlabs.creational.abstractfactory.model.CurrentAccountFactory;
+import com.techlabs.creational.abstractfactory.model.IAccount;
+import com.techlabs.creational.abstractfactory.model.IAccountFactory;
+
+
+public class AccountTest {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		IAccountFactory accountFactory = new CurrentAccountFactory();
+		IAccount account = accountFactory.createAccount();
+		
+		boolean exit = false;
+		do {
+			System.out.println("--------------------------");
+			System.out.println("Welcome");
+			System.out.println("ATM Menu: \n1. Deposit Money "
+					+ "\n2. Withdraw Money \n3. Exit");
+			int choice = scanner.nextInt();
+			
+			switch(choice) {
+			case 1: 
+				System.out.println("Enter amount to deposit: "); 
+				account.credit(scanner.nextInt());
+				break;
+			case 2:
+				System.out.println("Enter amount to withdraw: ");
+				account.debit(scanner.nextInt());
+				break;
+				
+			case 3:
+				exit =true; break;
+				
+			default:
+				System.out.println("Invalid input. Please select correct option");
+			}
+			System.out.println("---------------------------------------");
+		}
+		while(exit == false);
+	}
+
+}

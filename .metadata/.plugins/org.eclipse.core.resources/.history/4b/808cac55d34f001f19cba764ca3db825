@@ -1,0 +1,29 @@
+package com.techlabs.structural.adapter.test;
+
+import com.techlabs.structural.adapter.model.Biscuit;
+import com.techlabs.structural.adapter.model.Chocolate;
+import com.techlabs.structural.adapter.model.Hat;
+import com.techlabs.structural.adapter.model.HatAdapter;
+import com.techlabs.structural.adapter.model.ShoppingCart;
+
+public class ShoppingCartTest {
+
+	public static void main(String[] args) {
+		HatAdapter hat = new HatAdapter( new Hat( "sports hat", "Baseball Cap",100,10));
+		HatAdapter hat1 =new HatAdapter( new Hat( "hat", "straw hat",200, 20));
+		Chocolate choclate = new Chocolate("Snickers", 50);
+		Biscuit biscuit = new Biscuit("NutriChoice", 20);
+		ShoppingCart cart = new ShoppingCart();
+		cart.addItem(hat);
+		cart.addItem(hat1);
+		cart.addItem(choclate);
+		cart.addItem(biscuit);
+		
+		System.out.println("ItemName \t\t Price");
+		cart.displayItems();
+		
+		System.out.println("Total Bill is : "+cart.getTotalPrice());
+		
+	}
+	
+}

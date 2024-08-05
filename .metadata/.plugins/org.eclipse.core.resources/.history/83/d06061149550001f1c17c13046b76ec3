@@ -1,0 +1,14 @@
+package com.techlabs.behavioural.model;
+
+
+public class EmailNotifier implements INotifiers{
+
+	@Override
+	public void notifyUser(Account account,String operation, double amount) {
+		System.out.println("Email");
+		System.out.println(" withdrawn sucessfully, balance is "+account.getBalance());
+		System.out.println("---------------------");
+		
+	}
+
+}

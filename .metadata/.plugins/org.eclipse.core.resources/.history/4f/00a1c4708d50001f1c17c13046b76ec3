@@ -1,0 +1,5 @@
+package com.techlabs.behavioural.model;
+
+public class InsufficientFundsException {
+
+}

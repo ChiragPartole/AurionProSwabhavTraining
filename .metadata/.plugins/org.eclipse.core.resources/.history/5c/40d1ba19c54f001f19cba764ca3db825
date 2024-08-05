@@ -1,0 +1,19 @@
+package com.techlabs.structural.facade.model;
+
+public class ItalianMenu implements IMenu{
+
+	@Override
+	public void displayMenu() {
+		System.out.println("Italian menu");
+		System.out.println("Spaghetti alla Carbonara.\r\n" + 
+				"Napoletana Pizza.\r\n" + 
+				"Risotto.\r\n" + 
+				"Arancini.\r\n" + 
+				"Fiorentina Steak.\r\n" + 
+				"Polenta.\r\n" + 
+				"Ossobuco.\r\n" + 
+				"Truffles.");
+		
+	}
+
+}

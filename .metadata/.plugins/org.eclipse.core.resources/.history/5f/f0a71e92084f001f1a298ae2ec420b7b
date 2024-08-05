@@ -1,0 +1,12 @@
+package com.techlabs.abstractfactory.model;
+
+
+
+public class MahindraFactory implements IFactory{
+
+	@Override
+	public ICar makeCar() {
+		return (ICar) new Mahindra();
+	}
+
+}

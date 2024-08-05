@@ -1,0 +1,16 @@
+package com.techlabs.ocp.violation.test;
+
+import com.techlabs.ocp.violation.model.FestivalType;
+import com.techlabs.ocp.violation.model.FixedDeposit;
+
+public class FDTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FixedDeposit fd = new FixedDeposit(1,"Chirag",1000,2,FestivalType.HOLI);
+		
+		fd.calculateSimpleInterest()
+
+	}
+
+}

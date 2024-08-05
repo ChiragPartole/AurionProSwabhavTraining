@@ -1,0 +1,13 @@
+package com.techlabs.behavioural.model;
+
+
+public class SMSNotifier implements INotifiers{
+
+	@Override
+	public void notifyUser(Account account,double amount) {
+		System.out.println("sms");
+		System.out.println("Your account number"+ account.getAccountNumber()+
+				",debited amount: "+ amount+", balance is "+account.getBalance());
+		System.out.println("---------------------");
+	}
+}

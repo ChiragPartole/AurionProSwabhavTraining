@@ -1,0 +1,8 @@
+package com.techlabs.abstractfactory.model;
+
+import com.techlabs.creational.abstractfactory.model.ICar;
+
+public interface IFactory {
+	ICar makeCar();
+
+}

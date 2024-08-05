@@ -1,0 +1,9 @@
+package com.techlabs.isp.solution.model;
+
+public interface ILunchInterval {
+	void startWork();
+	void stopWork();
+	void eat();
+	void drink();
+
+}
