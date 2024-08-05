@@ -1241,3 +1241,5 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2024-08-05 11:47:17,896 [Worker-48] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.12.14/byte-buddy-agent-1.12.14.jar
 2024-08-05 11:47:17,906 [Worker-48] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/objenesis/objenesis/3.2/objenesis-3.2.jar
 2024-08-05 11:47:17,931 [Worker-48] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/objenesis/objenesis/3.2/objenesis-3.2.jar
+2024-08-05 11:52:51,395 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-08-05 11:54:51,943 [Worker-17] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using null lifecycle mapping for MavenProject: com.techlabs:23_unittesting_app:0.0.1-SNAPSHOT @ D:\Aurionpro_training\23_unittesting_app\pom.xml.
