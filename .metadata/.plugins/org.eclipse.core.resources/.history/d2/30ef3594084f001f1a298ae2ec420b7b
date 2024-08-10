@@ -1,6 +1,0 @@
-package com.techlabs.abstractfactory.model;
-
-public interface IFactory {
-	ICar makeCar();
-
-}

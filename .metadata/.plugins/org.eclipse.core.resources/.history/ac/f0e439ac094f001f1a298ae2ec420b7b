@@ -1,9 +1,0 @@
-package com.techlabs.creational.abstractfactory.model;
-
-public class MarutiFactory implements IFactory{
-
-	@Override
-	public ICar makeCar() {
-		return (ICar) new Maruti();
-	}
-}

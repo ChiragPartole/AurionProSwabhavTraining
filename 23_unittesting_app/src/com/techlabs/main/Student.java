@@ -14,6 +14,6 @@ public class Student {
 
 
 	public double calculatePercentage() {
-		return (studentService.getMarks()/studentService.getNumberOfSubjects())*100;
+		return (double)studentService.getMarks()/studentService.getNumberOfSubjects();
 	}
 }

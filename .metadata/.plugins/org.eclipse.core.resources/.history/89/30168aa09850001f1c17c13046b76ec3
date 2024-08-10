@@ -1,8 +1,0 @@
-package com.techlabs.behavioural.state.model;
-
-public interface IPacketState {
-
-	 void next(Packet);
-	  void current(Packet);
-	  void previous(Packet);
-}

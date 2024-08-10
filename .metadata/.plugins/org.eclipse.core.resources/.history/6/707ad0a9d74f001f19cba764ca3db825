@@ -1,5 +1,0 @@
-package com.techlabs.structural.decorator.model;
-
-public class CarServiceDecorator {
-
-}

@@ -1,7 +1,0 @@
-package com.techlabs.structural.adapter.model;
-
-public class ShoppingCart {
-	
-	private List<IItems> cartItems;
-
-}

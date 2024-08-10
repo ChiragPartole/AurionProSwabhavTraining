@@ -1,7 +1,0 @@
-package com.techlabs.creational.abstractfactory.model;
-
-public interface ISavingsAccountFactory {
-
-	IAccount createAccount(int accountNumber, String name, double balance, double minimumBalance);
-
-}

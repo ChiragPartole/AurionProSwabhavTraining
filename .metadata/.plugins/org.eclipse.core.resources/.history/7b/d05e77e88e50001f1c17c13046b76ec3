@@ -1,8 +1,0 @@
-package com.techlabs.behavioural.model;
-
-public interface INotifiers {
-	
-	Account account;
-	void notifyUser(account);
-
-}

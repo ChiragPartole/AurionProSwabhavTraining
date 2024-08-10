@@ -1,6 +1,0 @@
-package com.techlabs.behavioural.strategy.model;
-
-public interface IOoperation {
-
-	void doOperation(int a, int b);
-}

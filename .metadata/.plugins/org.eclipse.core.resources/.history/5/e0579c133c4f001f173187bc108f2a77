@@ -1,6 +1,0 @@
-package com.techlabs.creational.abstractfactory.model;
-
-public interface ICurrentAccount extends IAccountFactory{
-
-	IAccount createAccount(int accountNumber, String name, double balance, double overDraft);
-}
