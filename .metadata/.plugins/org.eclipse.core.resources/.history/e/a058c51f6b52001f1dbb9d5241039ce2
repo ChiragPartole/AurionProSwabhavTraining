@@ -1,6 +1,0 @@
-package com.techlabs.model;
-
-public enum PlayerSymbol {
-
-	X,O;
-}

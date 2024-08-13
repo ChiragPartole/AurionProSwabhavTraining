@@ -1,9 +1,0 @@
-package com.techlabs.model;
-
-public class GameLogic {
-	
-	for(int i=0; i<board.length; i++) {
-		if()
-	}
-
-}

@@ -9,7 +9,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="23_unittesting_app"/>
+			<item value="35-spring_core"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -52,6 +52,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Aurionpro_training\34_mini_project_bank_app\src\com\techlabs\controller\LoginController.java"/>
+			<item value="D:\Aurionpro_training\35_springcore"/>
 			<item value="D:\Aurionpro_training\23_unittesting_app"/>
 		</list>
 		<list key="projectNameTemplate">
