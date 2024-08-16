@@ -45,16 +45,44 @@
         </div>
         
     </nav>
-    <section id="addCustomer" class="bg-light mt-1 p-1">
-        
-            <div class="container-lg">
-
-                <div class="text-center">
-                    <h2>Balance</h2>
-                    <p class="lead">Your Current Balance is: ${balance}</p>
-                </div>
-                
+    <section id="admin" class="bg-light mt-1 pt-1">
+        <div class="container-lg pb-1">
+            <div class="text-center">
+                <h2>View Accounts</h2>
+                <p class="lead text-muted">Here you can view all of your accounts.</p>
             </div>
+
+
+    <table class="table table-bordered table-light table-responsive">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Account ID</th>
+                        <th scope="col">Account Number</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Balance</th>
+                        <th scope="col">Customer ID</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="account" items="${accounts}">
+                    <tr class="bg-light">
+                        
+                        <td>${account.getAccID()}</td>
+                        <td>${account.getAccNumber()}</td>
+                        <td>${account.getFirstName()}</td>
+                        <td>${account.getLastName()}</td>
+                        <td>${account.getBalance()}</td>
+                        <td>${account.getCustomerID()}</td>
+                        <td>${account.getEmail()}</td>
+                    </tr>
+                    </c:forEach>
+                    
+                    
+                </tbody>
+            </table>
+        </div>
     </section>
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

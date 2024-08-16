@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.techlabs.model.TransactionsDB;
 import com.techlabs.model.UsersDB;
 
 
@@ -32,8 +33,10 @@ public class LoginController extends HttpServlet {
 		dbUsers.connectToDb();
 	
 		
+		
 		HttpSession session = request.getSession(); 
 		session.setAttribute("username", username);
+		
 		session.setAttribute("role", role);
 		if(dbUsers.validateCredentials(username, password,role)) {
 			
@@ -44,8 +47,11 @@ public class LoginController extends HttpServlet {
 			if("admin".equals(role)) {	
 				requestDispatcher = request.getRequestDispatcher("/Admin.jsp");
 			}
-			else
+			else {
+				
 				requestDispatcher = request.getRequestDispatcher("/Customer.jsp");
+				
+			}
 		}
 		else {
 			request.setAttribute("role", role);

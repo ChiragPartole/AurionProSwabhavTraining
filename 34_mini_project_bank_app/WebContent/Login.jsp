@@ -25,6 +25,20 @@
                     <!-- Remove the attribute from session after displaying -->
                     <c:remove var="operationDone" scope="session" />
                 </c:if>
+               <%
+    // Get the session, but don't create a new one if it doesn't exist
+    HttpSession session1 = request.getSession(false);
+
+    // Check if the session exists
+    if (session1 != null) {
+        // Invalidate the session
+        session1.invalidate();
+        
+        // Optionally, you can provide a message or redirect to another page
+        
+    }
+%>
+                
             </div>
     <div class="container">
         <div class="row justify-content-center my-5">

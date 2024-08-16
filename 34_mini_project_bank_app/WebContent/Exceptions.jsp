@@ -32,9 +32,15 @@
             <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
                <form action="NavbarController" method="get">
                 <ul class="navbar-nav">
+                
+         
+
+                    
+                    
                     <li class="nav-item ms-2 d-none d-md-inline">
-                         <button name="action" value="${sessionScope.role}" type="submit" class="btn btn-outline-secondary">Home</button>
-                    </li>
+        <button name="action" value="${sessionScope.role}" type="submit" class="btn btn-outline-secondary">Home</button>
+   </li>
+                    
                     <li class="nav-item ms-2 d-none d-md-inline">
                         <a class="btn btn-outline-secondary" href="Login.jsp">Logout</a>
                     </li>
@@ -50,7 +56,7 @@
             <div class="container-lg">
 
                 <div class="text-center">
-                    <h2>EXCEPTIONS</h2>
+                   
                     <p class="lead">OOPS!! Something went Wrong...</p>
                     <p class="lead">${exception}</p>
                 </div>

@@ -30,7 +30,7 @@ public class NavbarController extends HttpServlet {
 
 	
 		
-		HttpSession session = request.getSession(); 
+		
 		
 		if("home".equals(action)) {	
 			requestDispatcher = request.getRequestDispatcher("/Admin.jsp");

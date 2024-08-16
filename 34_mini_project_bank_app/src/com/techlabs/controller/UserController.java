@@ -1,6 +1,7 @@
 package com.techlabs.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.techlabs.entity.Account;
 import com.techlabs.model.TransactionsDB;
 
 @WebServlet("/UserController")
@@ -39,9 +41,12 @@ public class UserController extends HttpServlet {
 		}else if("checkbalance".equals(action)) {
 			TransactionsDB db = TransactionsDB.getDbTransactions();
 			db.connectToDb();
-			double balance = db.getAccountBalance((String)session.getAttribute("username"));
+			System.out.println("getDifferentAccountsForSameCustomer, "+session.getAttribute("username"));
+			List<Account> accounts = db.getDifferentAccountsForSameCustomer((String)session.getAttribute("username"));
 			
-			request.setAttribute("balance", balance);
+		
+			
+			request.setAttribute("accounts", accounts);
 			requestDispatcher = request.getRequestDispatcher("/CheckBalance.jsp");
 		}else {
 			requestDispatcher = request.getRequestDispatcher("/Exceptions.jsp");

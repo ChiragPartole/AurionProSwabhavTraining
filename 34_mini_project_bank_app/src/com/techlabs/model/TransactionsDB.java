@@ -84,12 +84,17 @@ public class TransactionsDB {
 		
 		try {
 			preparedStatement = connection.prepareStatement("SELECT t.senderAccNo,t.receiverAccNo,d.type,t.amount,t.date from transactions t \r\n" + 
-					"		INNER JOIN transaction_types d ON t.transactionTypesID = d.transactionTypesID\r\n" + 
-					"		WHERE t.senderAccNo = (SELECT a.accountNumber FROM accounts a INNER JOIN customers c ON\r\n" + 
-					"		a.customerID = c.customerID \r\n" + 
-					"		WHERE c.customerID = (SELECT customerID FROM customers \r\n" + 
-					"		WHERE userID = (SELECT userID from users WHERE username = ?))) OR d.type=\"transfer\";;");
+					"INNER JOIN transaction_types d ON t.transactionTypesID = d.transactionTypesID\r\n" + 
+					"WHERE t.senderAccNo = (SELECT a.accountNumber FROM accounts a INNER JOIN customers c ON\r\n" + 
+					"a.customerID = c.customerID \r\n" + 
+					"WHERE c.customerID = (SELECT customerID FROM customers \r\n" + 
+					"WHERE userID = (SELECT userID from users WHERE username = ?))) \r\n" + 
+					"OR (d.type=\"transfer\" AND  t.senderAccNo = (SELECT a.accountNumber FROM accounts a INNER JOIN customers c ON\r\n" + 
+					"a.customerID = c.customerID \r\n" + 
+					"WHERE c.customerID = (SELECT customerID FROM customers \r\n" + 
+					"WHERE userID = (SELECT userID from users WHERE username = ?)))) ;");
 			preparedStatement.setString(1, username);
+			preparedStatement.setString(2, username);
 			dbTransactions = preparedStatement.executeQuery();
 			
 			while(dbTransactions.next()) {
@@ -187,6 +192,39 @@ public class TransactionsDB {
 		return balance;
 	}
 
+public List<Account> getDifferentAccountsForSameCustomer(String currentUser) {
+		
+		List<Account> accounts = new ArrayList<Account>();
+		try {
+			 preparedStatement = connection.prepareStatement("SELECT a.accountID,a.accountNumber,a.balance,"
+					+ "c.customerID,c.firstname,c.lastname,c.customeremail "
+					+ "FROM accounts a INNER JOIN customers c ON\r\n" + 
+					"a.customerID = c.customerID \r\n" + 
+					"WHERE c.customerID = (SELECT customerID FROM customers \r\n" + 
+					"WHERE userID = (SELECT userID from users WHERE username = ?));");
+			preparedStatement.setString(1, currentUser);
+			
+			ResultSet dbAccounts = preparedStatement.executeQuery();
+			
+			while(dbAccounts.next()) {
+				accounts.add(new Account(dbAccounts.getInt(1),
+						dbAccounts.getInt(2),dbAccounts.getDouble(3),
+						dbAccounts.getInt(4),dbAccounts.getString(5),
+						dbAccounts.getString(6),dbAccounts.getString(7)));
+			}
+			
+			for(Account account: accounts) {
+				System.out.println(account);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	
+		return accounts;
+	}
 	public void newTransactionDebit(String currentUser, double amount) {
 
 		if(amount <0) {

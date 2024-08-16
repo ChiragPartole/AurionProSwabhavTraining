@@ -51,7 +51,13 @@ public class AdminController extends HttpServlet {
 		}
 		
 		else {
-			requestDispatcher = request.getRequestDispatcher("/Admin.jsp");
+			
+				String exception = "Tried to go to another page with url without logging in.";
+				request.setAttribute("exception", exception);
+				
+				requestDispatcher = request.getRequestDispatcher("/Exceptions.jsp");
+			
+			
 		}
 		
 		

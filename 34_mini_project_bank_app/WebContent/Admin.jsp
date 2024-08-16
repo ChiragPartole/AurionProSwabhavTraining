@@ -55,7 +55,7 @@
                 
                 <c:if test="${not empty sessionScope.operationDone}">
                     
-                        ${sessionScope.operationDone}
+                        <b>${sessionScope.operationDone}</b>
                     
                     <!-- Remove the attribute from session after displaying -->
                     <c:remove var="operationDone" scope="session" />

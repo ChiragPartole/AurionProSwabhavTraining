@@ -50,9 +50,10 @@
             <div class="text-center">
                 <h2>CUSTOMER HOME</h2>
                 <p class="lead text-muted">WELCOME ${username}.</p>
+          
                 <c:if test="${not empty sessionScope.operationDone}">
                     
-                        ${sessionScope.operationDone}
+                        <b>${sessionScope.operationDone}</b>
                     
                     <!-- Remove the attribute from session after displaying -->
                     <c:remove var="operationDone" scope="session" />
@@ -98,10 +99,10 @@
                  <div class="col-6 col-lg-4 col-xl-3 ">
                     <div class="card  border border-2">
                         <div class="card-body text-center py-4">
-                            <h4 class="card-title">Check Balance</h4>
-                            <p class="card-text mx-5 text-muted d-none d-lg-block">Here you can check your bank balance.
+                            <h4 class="card-title">View Account Details</h4>
+                            <p class="card-text mx-5 text-muted d-none d-lg-block">View details of your accounts.
                             </p>
-                            <button type="submit" name="action" value="checkbalance" class="btn btn-outline-primary btn-lg mt-3">CHECK NOW</button>
+                            <button type="submit" name="action" value="checkbalance" class="btn btn-outline-primary btn-lg mt-3">VIEW NOW</button>
                         </div>
                     </div>
                 </div>

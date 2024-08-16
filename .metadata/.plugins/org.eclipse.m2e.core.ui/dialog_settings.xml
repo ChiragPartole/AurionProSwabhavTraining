@@ -9,6 +9,9 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="36_springcore"/>
+			<item value="35_spring"/>
+			<item value="35_spring_app"/>
 			<item value="35-spring_core"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -39,6 +42,20 @@
 		<item value="10" key="y"/>
 		<item value="531" key="height"/>
 	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\Aurionpro_training\35_springcore_app"/>
+			<item value="D:\Aurionpro_training\35_spring_app"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
@@ -52,6 +69,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Aurionpro_training\35_spring\src\main\resources\config.xml"/>
+			<item value="D:\Aurionpro_training\35_springcore_app\src\main\resources\config.xml"/>
 			<item value="D:\Aurionpro_training\34_mini_project_bank_app\src\com\techlabs\controller\LoginController.java"/>
 			<item value="D:\Aurionpro_training\35_springcore"/>
 			<item value="D:\Aurionpro_training\23_unittesting_app"/>
